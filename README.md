@@ -6,7 +6,7 @@ A waste disposal assistant that helps you figure out how to correctly dispose of
 - Explains disposal reasoning via Gemini API
 - Surfaces nearby disposal facilities using Google Places API
 - Logs all requests to Cloud SQL Postgres
-- Safety layer catches hazardous materials before they reach the model
+- Safety layer validates model output and overrides recommendations for hazardous materials
 
 ### Stack
 Python, FastAPI, Docker, Google Cloud Run, PostgreSQL, HuggingFace, Gemini API, Google Places API
