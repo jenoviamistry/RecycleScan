@@ -15,6 +15,9 @@ Python, FastAPI, Docker, Google Cloud Run, PostgreSQL, HuggingFace, Gemini API, 
 Active development. Backend in progress, hardware extension planned: an ESP32-CAM mounted near a bin that automatically captures an item when held up and signals which bin it belongs in with an LED.
 
 ### Structure
-- `backend/database.py` — database models and connection
-- `backend/models.py` — Pydantic schemas
-- `backend/safety.py` — hazardous material detection layer
+- `backend/database.py` — async database connection and session setup
+- `backend/models.py` — SQLAlchemy database table definitions  
+- `backend/safety.py` — hazardous material detection and Gemini analysis
+- `backend/classifier.py` — HuggingFace image classification
+- `backend/gemini.py` — conversational chat follow-ups
+- `backend/main.py` — FastAPI endpoints (in progress)
